@@ -40,6 +40,8 @@ public class TasteEventRestAction extends BaseRestHandler {
                 "/{index}/_taste/event", this);
         restController.registerHandler(RestRequest.Method.POST,
                 "/{index}/{type}/_taste/event", this);
+        restController.registerHandler(RestRequest.Method.POST,
+                "/{index}/_taste/event/_bulk", this);
 
         userRequestHandler = new UserRequestHandler(settings, client);
         itemRequestHandler = new ItemRequestHandler(settings, client);
